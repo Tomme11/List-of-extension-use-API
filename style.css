@@ -1,0 +1,158 @@
+body{
+    /*background: hsl(227, 75%, 14%);*/
+    background: linear-gradient(180deg, #040918 0%, #091540 100%);
+    
+
+}
+h2,h3{
+    color: hsl(0, 0%, 93%);
+}
+p{
+    color: hsla(200, 60%, 99%, 0.663);
+}
+main{
+   /* margin: auto;*/
+
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: hsla(0, 6%, 84%, 0.123);
+    height: 35px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 75px;
+    margin-right: 75px;
+    border-radius: 25px;
+}
+header img{
+    height: 30px;
+    background-color: hsla(0, 0%, 93%, 0) ;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding: 4px;
+}
+
+.sun{
+    height: 30px;
+    background-color: hsla(0, 0%, 93%, 0) ;
+    margin-left: 25px;
+    margin-right: 25px;
+    border: none;
+    border-radius: 4px;
+    padding: 5px;
+    &:hover{
+        border: 1px solid rgba(255, 255, 255, 0.453);
+        background: hsla(217, 61%, 90%, 0.138) ;;
+    }
+
+}
+.titre{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: space-between;
+    margin-left: 75px;
+    margin-right: 75px;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    
+}
+nav ul li button{
+    min-width: 70px;
+    margin-right: 5px;
+    height: 35px;
+    font-size: 0.9rem;
+    border-radius: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.316);
+
+    color: hsl(0, 0%, 93%);
+    background:hsla(217, 61%, 90%, 0.138) ;
+    &:active{
+        background-color: #ff6a6a;
+    }
+}
+.extension{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+    margin-left: 75px;
+    margin-right: 75px;
+    
+}
+.extension article{
+    border: 1px solid black;
+    border-radius: 25px;
+    background: hsla(217, 61%, 90%, 0.138);
+}
+.extension article nav img{
+    margin-right: 25px;
+}
+.extension article nav{
+    display: flex;
+    flex-direction: row;
+    margin-left: 60px;
+}
+.extension article button{
+    margin-left: 60px;
+    margin-bottom: 25px;
+    width: 100px;
+    height: 35px;
+    font-size: 0.9rem;
+    border-radius: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.316);
+    margin-top: 25px;
+    color: hsl(0, 0%, 93%);
+    background:hsla(217, 61%, 90%, 0.138) ;
+    &:hover{
+        border: 2px solid red;
+    }
+}
+/*******teste bouton*/
+label{
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 24px;
+    margin-left: 150px;
+}
+/***Check box invisible*/
+label input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+/*fond du bouton*/
+span{
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background-color: #ccc;
+    border-radius: 30px;
+    transition: 0.3s;
+    
+}
+/*cercle blanc*/
+span::before{
+    content: "";
+    position: absolute;
+    height: 17px;
+    width: 17px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+/*etaton*/
+input:checked + span{
+    background-color: #ff6a6a;
+}
+input:checked + span::before{
+    transform:translateX(24px);
+}
+
