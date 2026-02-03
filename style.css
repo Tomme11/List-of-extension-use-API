@@ -88,6 +88,7 @@ nav ul li button{
     border: 1px solid black;
     border-radius: 25px;
     background: hsla(217, 61%, 90%, 0.138);
+    width:400px;
 }
 .extension article nav img{
     margin-right: 25px;
@@ -154,5 +155,10 @@ input:checked + span{
 }
 input:checked + span::before{
     transform:translateX(24px);
+}
+@media (max-width:1440px){
+    .extension{
+        grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    }
 }
 
